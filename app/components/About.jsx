@@ -156,7 +156,7 @@ export default function About() {
           </div>
         </InfoSection>
       </motion.div> */}
-      <motion.div className="max-w-[800px] px-8 md:px-5">
+      <motion.div className="max-w-[800px] pl-8 md:px-5">
         {[
           {
             title: "Education",

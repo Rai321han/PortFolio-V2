@@ -65,7 +65,7 @@ export default function Slide({ project }) {
       <div className="relative bg-black grid-cols-[2/3]">
         <div className="absolute top-0 left-1/2 md:left-0 -translate-x-1/2 bg-gradient-to-r  md:bg-gradient-to-b  from-black from-10% via-[#9A1616] to-black to-90% group-hover:via-[#FF0000] w-full h-1 md:h-full md:w-1"></div>
         <div className="absolute bottom-100 left-1/2   md:-bottom-10 md:-left-5 -translate-x-1/2 bg-[#FF0000] -translate-y-1/2 -z-10 h-[15px] w-[70%]  md:w-[10px] md:h-[50%] blur-xl md:blur-xl"></div>
-        <div className="p-5 pl-10 flex flex-col  md:grid gap-10 md:grid-rows-[minmax(150px,2.5fr)_1fr] md:grid-cols-[1fr_2fr]">
+        <div className="py-5 px-2 md:pl-10 flex flex-col  md:grid gap-10 md:grid-rows-[minmax(150px,2.5fr)_1fr] md:grid-cols-[1fr_2fr]">
           <div className="md:grid-rows-[1/2] md:grid-cols-[1/2]">
             <div className="text-headingColor mb-2">Title</div>
             <motion.div

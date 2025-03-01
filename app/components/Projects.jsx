@@ -30,7 +30,7 @@ export default function Projects() {
         <SectionHead>Projects</SectionHead>
       </div>
       <div>
-        <div className="mt-12 flex flex-col items-center justify-center">
+        <div className="md:mt-12 flex flex-col items-center justify-center">
           <ProjectSlider projects={projects} />
         </div>
       </div>
