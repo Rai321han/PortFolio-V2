@@ -2,9 +2,51 @@
 @tailwind components;
 @tailwind utilities;
 
+.skillpath {
+  clip-path: polygon(
+    90% 0%,
+    100% 20%,
+    100% 80%,
+    90% 100%,
+    10% 100%,
+    0% 80%,
+    0% 20%,
+    10% 0%
+  );
+}
+
+.lineClipUp {
+  clip-path: polygon(5% 0%, 95% 0, 100% 100%, 0% 100%);
+}
+
+.lineClipDown {
+  clip-path: polygon(0 0, 100% 0, 95% 100%, 5% 100%);
+}
+
+.linkClip {
+  clip-path: polygon(
+    24.8% 33%,
+    37.5% 42%,
+    58.5% 33%,
+    100.1% 32%,
+    100.1% 71.8%,
+    20% 85%,
+    0% 76.3%,
+    0% 33.8%,
+    11.6% 41%
+  );
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --textColor: #be7e7e;
+  --linkColor: #000000;
+  --headingColor: #9a1616;
+  --rGradient: radial-gradient(#d50c10 0%, #3f0005 40%);
+}
+
+@layer {
 }
 
 @media (prefers-color-scheme: dark) {

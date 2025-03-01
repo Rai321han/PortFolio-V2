@@ -10,6 +10,10 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        textColor: "var(--textColor)",
+        linkColor: "var(--linkColor)",
+        headingColor: "var(--headingColor)",
+        rGradient: "var(--rGradient)"
       },
     },
   },
