@@ -40,8 +40,8 @@ export default function Slide({ project }) {
 
       <motion.div
         className="-shadow-2xl grid-cols-[1/2] relative text-center block md:hidden"
-        initial={{ y: 150, opacity: 0, rotate: 0 }}
-        whileInView={{ y: 60, opacity: 1, rotate: -6 }}
+        initial={{ y: 150, opacity: 0 }}
+        whileInView={{ y: 60, opacity: 1 }}
         viewport={{ once: true, amount: 0.6 }}
         transition={{ duration: 0.4, ease: "easeOut" }}
       >
