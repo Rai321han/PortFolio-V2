@@ -9,7 +9,7 @@ const amaticFont = Amatic_SC({
 
 export default function InfoSection({ children, title, imgSrc, imgAlt }) {
   return (
-    <div className="relative border-l-2 border-red-800 pt-5 px-8 sm:px-16 pb-10 ">
+    <div className="relative border-l-2 border-red-800 pt-5 px-8 pr-2 sm:px-16 pb-10 ">
       <div
         className={`text-headingColor ${amaticFont.className} font-extrabold text-4xl`}
       >

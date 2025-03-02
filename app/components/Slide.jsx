@@ -76,7 +76,7 @@ export default function Slide({ project }) {
               {project.title}
             </motion.div>
           </div>
-          <div className=" md:grid-rows-[1/2] md:grid-cols-[2/3]">
+          <div className=" md:grid-rows-[1/2] md:grid-cols-[2/3] min-h-[150px]">
             <div className="text-headingColor mb-2">Description</div>
             <motion.div
               initial={{ y: 10, opacity: 0 }}

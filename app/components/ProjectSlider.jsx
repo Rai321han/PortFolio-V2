@@ -18,22 +18,21 @@ export default function ProjectSlider({ projects }) {
     setProjectNo(prevNo);
   }
   return (
-    <div className="flex flex-col items-center">
+    <div className="relative flex flex-col items-center">
       <Slide project={projects[projectNo]} key={projectNo} />
-      <div>
-        <button
-          className="text-textColor p-4 bg-headingColor rounded-lg"
-          onClick={handlePrevProject}
-        >
-          Prev
-        </button>
-        <button
-          className="text-textColor p-4 bg-headingColor rounded-lg"
-          onClick={handleNextProject}
-        >
-          Next
-        </button>
-      </div>
+
+      <button
+        className="text-textColor p-4 bg-headingColor rounded-lg absolute top-[30%] md:top-1/2 -translate-y-1/2 left-0 "
+        onClick={handlePrevProject}
+      >
+        Prev
+      </button>
+      <button
+        className="text-textColor p-4 bg-headingColor rounded-lg absolute top-[30%] md:top-1/2 right-0 -translate-y-1/2"
+        onClick={handleNextProject}
+      >
+        Next
+      </button>
     </div>
   );
 }
