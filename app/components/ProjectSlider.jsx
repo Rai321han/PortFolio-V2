@@ -22,7 +22,7 @@ export default function ProjectSlider({ projects }) {
       <Slide project={projects[projectNo]} key={projectNo} />
 
       <button
-        className="text-textColor p-1 opacity-30 rounded-lg absolute top-[30%] md:top-1/2 -translate-y-1/2 -left-5 "
+        className="text-textColor p-1 opacity-30 rounded-lg absolute top-[30%] md:top-1/2 -translate-y-1/2 left-5 "
         onClick={handlePrevProject}
       >
         <svg
@@ -80,7 +80,7 @@ export default function ProjectSlider({ projects }) {
         </svg>
       </button>
       <button
-        className="text-textColor p-1 opacity-30 rounded-lg absolute top-[30%] md:top-1/2 -right-5 -translate-y-1/2"
+        className="text-textColor p-1 opacity-30 rounded-lg absolute top-[30%] md:top-1/2 right-5 -translate-y-1/2"
         onClick={handleNextProject}
       >
         <svg
