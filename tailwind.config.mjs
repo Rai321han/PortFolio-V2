@@ -12,8 +12,9 @@ export default {
         foreground: "var(--foreground)",
         textColor: "var(--textColor)",
         linkColor: "var(--linkColor)",
+        linkHoverColor: "var(--linkHoverColor)",
         headingColor: "var(--headingColor)",
-        rGradient: "var(--rGradient)"
+        rGradient: "var(--rGradient)",
       },
     },
   },
