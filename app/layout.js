@@ -2,7 +2,7 @@
 
 import { Geist, Geist_Mono, Amatic_SC } from "next/font/google";
 import "./globals.css";
-import Footer from "./components/Footer";
+import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 
 const geistSans = Geist({
@@ -62,40 +62,107 @@ export default function RootLayout({ children }) {
               />
             </svg>
           </div>
-          <div
+          {/* <motion.div
+            key={showColors}
             className={`z-[1000] mb-10 items-center justify-center ${
               showColors ? "flex" : "hidden"
             } flex-col gap-2 fixed bottom-[0px] right-[10px] md:bottom-[50px] md:right-[50px]`}
           >
             <div
-              className=" text-white cursor-pointer"
-              onClick={() => {
-                setShowColors((prev) => !prev);
-              }}
+              onClick={() => setShowColors(false)}
+              className="text-white cursor-pointer"
             >
               X
             </div>
+            {["blue", "orange", "purple"].map((item) => (
+              <div
+                key={item}
+                onClick={() => setTheme(item)}
+                className={`w-[30px] h-[20px] bg-${item}-500 ${
+                  theme === item && "border-2 border-white"
+                } hover:bg-${item}-400  cursor-pointer`}
+              ></div>
+            ))}
+          </motion.div> */}
+          {/* <motion.div
+            key={showColors}
+            className={`z-[1000] mb-10 items-center justify-center ${
+              showColors ? "flex" : "hidden"
+            } flex-col gap-2 fixed bottom-[0px] right-[10px] md:bottom-[50px] md:right-[50px]`}
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4 }}
+          >
             <div
-              onClick={() => setTheme("purple")}
-              className="w-[30px] h-[20px] bg-purple-500 hover:bg-purple-400  cursor-pointer"
-            ></div>
-            {/* <div
-              onClick={() => setTheme("red")}
-              className="w-[30px] h-[20px] bg-red-500 hover:bg-red-400 cursor-pointer"
-            ></div> */}
-            <div
-              onClick={() => setTheme("blue")}
-              className="w-[30px] h-[20px] bg-blue-500 hover:bg-blue-400 cursor-pointer"
-            ></div>
-            <div
-              onClick={() => setTheme("orange")}
-              className="w-[30px] h-[20px] bg-orange-500 hover:bg-orange-400 cursor-pointer"
-            ></div>
-            {/* <div
-              onClick={() => setTheme("green")}
-              className="w-[30px] h-[20px] bg-green-500 hover:bg-green-400 cursor-pointer"
-            ></div> */}
-          </div>
+              onClick={() => setShowColors(false)}
+              className="text-white cursor-pointer"
+            >
+              X
+            </div>
+
+            {["blue", "orange", "purple"].map((item, index) => (
+              <motion.div
+                key={item}
+                onClick={() => setTheme(item)}
+                className={`w-[30px] h-[20px] bg-${item}-500 ${
+                  theme === item && "border-2 border-white"
+                } hover:bg-${item}-400 cursor-pointer`}
+                variants={{
+                  hidden: { opacity: 0, y: 20 },
+                  visible: (i) => ({
+                    opacity: 1,
+                    y: 0,
+                    transition: { duration: 0.5, delay: i * 0.3 }, // Delays each item
+                  }),
+                }}
+                initial="hidden"
+                animate="visible"
+                custom={index}
+              ></motion.div>
+            ))}
+          </motion.div> */}
+          <AnimatePresence>
+            {showColors && (
+              <motion.div
+                key="color-picker"
+                className="z-[1000] mb-10 items-center justify-center flex flex-col gap-2 fixed bottom-[0px] right-[10px] md:bottom-[50px] md:right-[50px]"
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 10 }} // Animate down before removing
+                transition={{ duration: 0.2 }}
+              >
+                <div
+                  onClick={() => setShowColors(false)}
+                  className="text-white cursor-pointer"
+                >
+                  X
+                </div>
+
+                {["blue", "orange", "purple"].map((item, index) => (
+                  <motion.div
+                    key={item}
+                    onClick={() => setTheme(item)}
+                    className={`w-[30px] h-[20px] bg-${item}-500 ${
+                      theme === item && "border-2 border-white"
+                    } hover:bg-${item}-400 cursor-pointer`}
+                    variants={{
+                      hidden: { opacity: 0, y: 20 },
+                      visible: (i) => ({
+                        opacity: 1,
+                        y: 0,
+                        transition: { duration: 0.3, delay: i * 0.2 },
+                      }),
+                    }}
+                    initial="hidden"
+                    animate="visible"
+                    exit={{ opacity: 0, y: 20 }} // Animate out when closing
+                    custom={index}
+                  ></motion.div>
+                ))}
+              </motion.div>
+            )}
+          </AnimatePresence>
+          ;
         </div>
 
         {children}
