@@ -62,65 +62,6 @@ export default function RootLayout({ children }) {
               />
             </svg>
           </div>
-          {/* <motion.div
-            key={showColors}
-            className={`z-[1000] mb-10 items-center justify-center ${
-              showColors ? "flex" : "hidden"
-            } flex-col gap-2 fixed bottom-[0px] right-[10px] md:bottom-[50px] md:right-[50px]`}
-          >
-            <div
-              onClick={() => setShowColors(false)}
-              className="text-white cursor-pointer"
-            >
-              X
-            </div>
-            {["blue", "orange", "purple"].map((item) => (
-              <div
-                key={item}
-                onClick={() => setTheme(item)}
-                className={`w-[30px] h-[20px] bg-${item}-500 ${
-                  theme === item && "border-2 border-white"
-                } hover:bg-${item}-400  cursor-pointer`}
-              ></div>
-            ))}
-          </motion.div> */}
-          {/* <motion.div
-            key={showColors}
-            className={`z-[1000] mb-10 items-center justify-center ${
-              showColors ? "flex" : "hidden"
-            } flex-col gap-2 fixed bottom-[0px] right-[10px] md:bottom-[50px] md:right-[50px]`}
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4 }}
-          >
-            <div
-              onClick={() => setShowColors(false)}
-              className="text-white cursor-pointer"
-            >
-              X
-            </div>
-
-            {["blue", "orange", "purple"].map((item, index) => (
-              <motion.div
-                key={item}
-                onClick={() => setTheme(item)}
-                className={`w-[30px] h-[20px] bg-${item}-500 ${
-                  theme === item && "border-2 border-white"
-                } hover:bg-${item}-400 cursor-pointer`}
-                variants={{
-                  hidden: { opacity: 0, y: 20 },
-                  visible: (i) => ({
-                    opacity: 1,
-                    y: 0,
-                    transition: { duration: 0.5, delay: i * 0.3 }, // Delays each item
-                  }),
-                }}
-                initial="hidden"
-                animate="visible"
-                custom={index}
-              ></motion.div>
-            ))}
-          </motion.div> */}
           <AnimatePresence>
             {showColors && (
               <motion.div
@@ -162,7 +103,6 @@ export default function RootLayout({ children }) {
               </motion.div>
             )}
           </AnimatePresence>
-          ;
         </div>
 
         {children}
