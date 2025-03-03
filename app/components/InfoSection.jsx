@@ -26,7 +26,7 @@ export default function InfoSection({ children, title, imgSrc, imgAlt }) {
           sizes="(max-width: 768px) 33vw, (max-width: 1200px) 70vw, 100vw"
         />
         <div className="w-[30px] h-[60px] absolute blur-sm  bg-background -top-3 left-0 -z-10  "></div>
-        <div className="w-[50px] h-[50px] absolute top-0 -z-10 left-0 border-2 border-red-700 blur-xl bg-gradient-to-l from-background via-foreground to-background"></div>
+        <div className="w-[50px] h-[50px] absolute top-0 -z-10 left-0 blur-xl bg-gradient-to-l from-background via-foreground to-background"></div>
       </div>
       <div className="mt-5 ">{children}</div>
     </div>
