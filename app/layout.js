@@ -10,6 +10,21 @@ const geistSans = Geist({
   subsets: ["latin"],
 });
 
+const colors = {
+  blue: {
+    base: "bg-blue-500",
+    hover: "hover:bg-blue-400",
+  },
+  orange: {
+    base: "bg-orange-500",
+    hover: "hover:bg-orange-400",
+  },
+  purple: {
+    base: "bg-purple-500",
+    hover: "hover:bg-purple-400",
+  },
+};
+
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
@@ -83,9 +98,9 @@ export default function RootLayout({ children }) {
                   <motion.div
                     key={item}
                     onClick={() => setTheme(item)}
-                    className={`w-[30px] h-[20px] bg-${item}-500 ${
+                    className={`w-[30px] h-[20px] ${colors[item].base} ${
                       theme === item && "border-2 border-white"
-                    } hover:bg-${item}-400 cursor-pointer`}
+                    } ${colors[item].hover} cursor-pointer`}
                     variants={{
                       hidden: { opacity: 0, y: 20 },
                       visible: (i) => ({
