@@ -28,7 +28,7 @@ export default function Slide({ project }) {
               alt="project image"
               src={project.imgSrc}
             />
-            <div className="absolute w-full h-full bg-gradient-to-b from-[#000917]  from-20% to-[#859dab2b] top-0"></div>
+            <div className="absolute w-full h-full bg-gradient-to-b from-background  from-20% to-overlayColor top-0"></div>
             <div className=" mt-8 absolute top-0 left-1/2 -translate-x-1/2">
               <h2 className="drop-shadow-[2_5px_10px_rgb(0, 0, 0)] text-3xl  text-center text-headingColor font-extrabold">
                 {project.title}
@@ -52,7 +52,7 @@ export default function Slide({ project }) {
               alt="project image"
               src={project.imgSrc}
             />
-            <div className="absolute w-full h-full bg-gradient-to-b from-background from-20% to-[#9a16166c] top-0"></div>
+            <div className="absolute w-full h-full bg-gradient-to-b from-background from-20% to-overlayColor top-0"></div>
             <div className=" mt-8 absolute top-0 left-1/2 -translate-x-1/2">
               <h2 className="drop-shadow-[2_5px_10px_rgb(0, 0, 0)] text-3xl  text-center text-headingColor font-extrabold">
                 {project.title}
@@ -63,7 +63,7 @@ export default function Slide({ project }) {
       </motion.div>
 
       <div className="relative bg-background grid-cols-[2/3]">
-        <div className="absolute top-0 left-1/2 md:left-0 -translate-x-1/2 bg-gradient-to-r  md:bg-gradient-to-b  from-background from-10% via-primary to-background to-90% group-hover:via-[#FF0000] w-full h-1 md:h-full md:w-1"></div>
+        <div className="absolute top-0 left-1/2 md:left-0 -translate-x-1/2 bg-gradient-to-r  md:bg-gradient-to-b  from-background from-10% via-primary to-background to-90% group-hover:via-primary w-full h-1 md:h-full md:w-1"></div>
         <div className="absolute bottom-100 left-1/2   md:-bottom-10 md:-left-5 -translate-x-1/2 bg-primary -translate-y-1/2 -z-10 h-[15px] w-[70%]  md:w-[10px] md:h-[50%] blur-xl md:blur-xl"></div>
         <div className="py-5 px-2 md:pl-10 flex flex-col  md:grid gap-10 md:grid-rows-[minmax(150px,2.5fr)_1fr] md:grid-cols-[1fr_2fr]">
           <div className="md:grid-rows-[1/2] md:grid-cols-[1/2]">

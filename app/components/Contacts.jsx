@@ -21,7 +21,7 @@ export default function Contacts() {
         >
           <div className="flex flex-row items-center">
             <Link
-              className="p-3 md:p-5 bg-headingColor rounded-full hover:bg"
+              className="p-3 md:p-5 bg-headingColor rounded-full hover:bg-linkHoverColor"
               href="https://www.linkedin.com/in/raihan-uddin-6681411b2"
               target="_blank"
             >
@@ -38,7 +38,7 @@ export default function Contacts() {
             <Link
               href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&su=Please+add+a+subject+line!&to=uddinraihan797@gmail.com"
               target="_blank"
-              className="py-3 px-10 md:px-5 md:py-5 text-background bg-headingColor rounded-full hover:bg"
+              className="py-3 px-10 md:px-5 md:py-5 text-background bg-headingColor rounded-full hover:bg-linkHoverColor"
             >
               send an email
             </Link>
@@ -46,7 +46,7 @@ export default function Contacts() {
             <Link
               href="https://github.com/Rai321han"
               target="_blank"
-              className="p-3 md:p-5 bg-headingColor rounded-full hover:bg"
+              className="p-3 md:p-5 bg-headingColor rounded-full hover:bg-linkHoverColor"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"

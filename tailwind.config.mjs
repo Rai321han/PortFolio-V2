@@ -15,6 +15,7 @@ export default {
         linkHoverColor: "var(--linkHoverColor)",
         headingColor: "var(--headingColor)",
         rGradient: "var(--rGradient)",
+        overlayColor: "var(--overlayColor)",
       },
     },
   },

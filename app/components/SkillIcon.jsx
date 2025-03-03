@@ -1,7 +1,7 @@
 export default function SkillIcon({ children }) {
   return (
     <div className="relative flex items-center justify-center">
-      <div className="skillpath border-2 border-primary bg-gradient-to-r from-[#0d2432] from-0% via-[#278CC9] via-10% to-[#0d2432] to-100% px-5">
+      <div className="skillpath border-2 border-primary bg-gradient-to-r from-background from-0% via-primary via-10% to-background to-140% px-5">
         {children}
       </div>
       {/* <div className="flex items-center justify-center h-full w-[15px] left-0 top-0 z-10 absolute">

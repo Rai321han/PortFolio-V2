@@ -235,7 +235,7 @@ export default function About() {
                   <span className="text-headingColor">
                     {" "}
                     <Link
-                      className="underline underline-offset-4 hover:text-textColor"
+                      className="underline underline-offset-4 hover:text-linkHoverColor"
                       target="_blank"
                       href="https://www.credly.com/badges/476c0452-9185-49f6-873f-eb4292c4d77f/public_url"
                     >
