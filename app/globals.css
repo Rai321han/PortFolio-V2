@@ -49,6 +49,17 @@
     font-size: 16px;
   }
 
+  .blue {
+    --background: #000917;
+    --primary: #1492c4;
+    --textColor: #859dab;
+    --linkColor: #000000;
+    --linkHoverColor: #72c7fb;
+    --overlayColor: #3f91c81e;
+    --headingColor: #3d9e83;
+    font-size: 16px;
+  }
+
   .orange {
     --background: #000000;
     --primary: #cf6312;
