@@ -1,7 +1,7 @@
 export default function SkillIcon({ children }) {
   return (
     <div className="relative flex items-center justify-center">
-      <div className="skillpath border-2 border-foreground bg-gradient-to-r from-[#0d2432] from-0% via-[#278CC9] via-10% to-[#0d2432] to-100% px-5">
+      <div className="skillpath border-2 border-primary bg-gradient-to-r from-[#0d2432] from-0% via-[#278CC9] via-10% to-[#0d2432] to-100% px-5">
         {children}
       </div>
       {/* <div className="flex items-center justify-center h-full w-[15px] left-0 top-0 z-10 absolute">
@@ -37,7 +37,7 @@ export default function SkillIcon({ children }) {
           />
         </svg>
       </div> */}
-      {/* <div className="lineClipUp flex items-center justify-center w-[90%] h-[3px] top-0 -translate-y-1/2 z-9 absolute bg-foreground "></div>
+      {/* <div className="lineClipUp flex items-center justify-center w-[90%] h-[3px] top-0 -translate-y-1/2 z-9 absolute bg-primary "></div>
       <div className=" lineClipDown flex items-center justify-center w-[90%] h-[3px] bottom-0 translate-y-1/2 z-9 absolute bg-foregroun"></div> */}
     </div>
   );
