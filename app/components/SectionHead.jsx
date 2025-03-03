@@ -10,7 +10,7 @@ export default function SectionHead({ children }) {
   return (
     <GradientBg border="top-bottom">
       <div
-        className={`${OldEnglishFont.className} py-4 md:py-6 text-black text-3xl`}
+        className={`${OldEnglishFont.className} py-3 md:py-6 text-black text-3xl`}
       >
         {children}
       </div>
